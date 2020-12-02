@@ -1,0 +1,10 @@
+<div class="topuser top{{ user['rank'] }}">
+    <div class="user-medal">
+        <img src="{{ url_for('static',filename='img/stakey1.png') }}" alt="stakey being cool">
+    </div>
+    <div class=user-card>
+        <p class=user-rank>{{ user['rank'] }}</p>
+        <p class=user-name><a href="/user/{{user['username']}}">{{ user['username'] }}</a></p>
+        <p class=user-score>Comment Score: {{ user['resultvotes'] }}</p>
+    </div>
+</div>

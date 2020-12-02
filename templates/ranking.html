@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+
+<header>
+    <h1>People of Politeia</h1>
+    <h2>{{ season_title }} </h2>
+    <!-- <img src="{{ url_for('static',filename='img/pi-logo.png') }}" alt="politeia"> -->
+    <hr>
+</header>
+
+<main>
+    {% if ranking|length > 0 %}
+    <div class="ranking">
+
+        <div class="container">
+            <div class="ranking-header">
+                <h2 class="ranking-header-title">Most Valuable Users</h2>
+                <p class="ranking-header-text">Those who posted the most useful comments.</p>
+            </div>
+        </div>
+
+        <div class="topusers">
+            {% for user in ranking[:3] %}
+                {% include 'top_user.html' %}
+            {% endfor %}
+        </div>
+
+        <div class="container">
+        <div class="ranking-table">
+        <h2>All Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Pi Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in ranking %}
+
+                    <tr>
+                        
+                        <td><a href="/user/{{user['username']}}">{{ user['rank'] }}</a></td>
+                        <td><a href="/user/{{user['username']}}">{{ user['username'] }}</td>
+                        <td><a href="/user/{{user['username']}}">{{ user['resultvotes'] }}</a></td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="no-comments-yet">
+        <h2>No comments yet</h2>
+        
+        <p>There are no comments yet. Go to <a href="https://proposals.decred.org" target=_blank>Politeia</a> and be the first one to participate this season.</p>
+        <img src="{{ url_for('static',filename='img/stakey-closeup.jpg')}}" alt="">
+
+    </div>
+    {% endif %}  
+</main>
+{% endblock %}

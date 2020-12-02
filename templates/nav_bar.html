@@ -1,0 +1,16 @@
+<nav>
+    <ul class="menu">
+        <li class="logo">
+            <a href="/"><img src="{{ url_for('static',filename='img/stakey1.png') }}" alt="politeia"></a>
+        </li>
+        <li><a href="/current">Current</a></li>
+        <li><a href="/previous">Previous</a></li>
+        <li><a href="/historical">Historical</a></li>
+        <li class="nav-search">
+            <form action="/search">
+                <input type="text" id="form-username" name="username" placeholder="Search for a user"><br>
+                <input type="submit" id=form-submit value="Search">
+            </form>
+        </li>
+    </ul>
+</nav>

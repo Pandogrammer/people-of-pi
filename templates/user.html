@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<header>
+    <h2>The People</h2>
+    <p>Because tickets vote, but people discuss.</p>
+</header>
+
+<main>
+    <div class="container">
+        <div class="user_details">
+            <h1>{{user['username']}} <span class="admin{{ user['isadmin'] }}"></span></h1>
+            <p>User ID: {{ user['id'] }}</p>
+            <p>Public key: {{user.pubkey}}</p>
+
+            {% if user['pastkeys']|length > 0 %}
+            <p>Past public keys:</p>
+            {% else %}
+            {% endif %}
+
+            <ul class="pastkeys">
+                {% for key in user['pastkeys'] %}
+                <li>{{ key }}</li>
+                {% endfor %}
+            </ul>
+            
+            <h2>Comment Activity</h2>
+            <img class="comment-activity" src="../static/img/activity_charts/{{user['username']}}.png" alt="">
+
+            <h2>Latest Comments</h2>
+            {% for comment in comments %}
+                <div class="comment">
+                    <div class="comment-details">
+                        <p class="comment-proposal">Proposal token: <a href="https://proposals.decred.org/proposals/{{ comment['token'] }}" target="_blank">{{ comment['token'] }}</a></p>
+                        <p class="comment-date">{{ comment['datetime'] }}</p>
+                        <p class="comment-score">Score: {{ comment['resultvotes'] }}</p>
+                    </div>
+                    <div class="comment-text">{{ comment['comment'] | markdown}}</div>
+                    <p class="view-on-pi"><a href="https://proposals.decred.org/proposals/{{ comment['token'] }}/comments/{{ comment['commentid']}}" target="_blank">Read at Politeia</a></p>
+                </div>
+            {%  endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}
