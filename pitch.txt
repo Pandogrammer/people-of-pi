@@ -57,7 +57,7 @@ Cómo sigue?
 
 Motivation
 
-	Politeia is one of the platforms for decision making of Decred that is used to vote for financing projects using Treasury founds. It is oriented to be used for seeing individual proposals, but doesn't count with much tools to understand who are the users, how do they participate and which are the ones that really contribute to discussions.
+	Politeia is one of the platforms for decision making of Decred that is used to vote for project financing using Treasury founds. It is oriented to be used for seeing individual proposals, but doesn't count with much tools to understand who are the users, how do they participate and which are the ones that really contribute to discussions.
 
 	Decred community needs better tools to understand what is happening in Politeia and make better long-term decisions without them being affected by dishonest behaviour like new accounts and spam.
 
@@ -70,7 +70,7 @@ Collection and analysis of data
 	
 	Politeia WWW API
 
-		PoP uses Politeia API to obtain all the proposals' comments in the platform. By using this information, it also creates a user database and generates their profiles by using the API. All this is done by a class named PoliteiaClient.
+		PoP uses Politeia API to obtain all the proposals' comments in the platform. By using this information, it also creates a user database and generates their profiles by using the API. This is all done by a class named PoliteiaClient.
 
 	Comments Explorer
 		
@@ -84,7 +84,7 @@ Collection and analysis of data
 				PoP also filters comments by date and enables the creation of monthly rankings to encourage users to participate more even if they have low ranking score in the all-time ranking. 
 
 			- Activity
-				Ultimately, PoP also generates charts of the users activity to understand how much and when did they participate in the platform from it's begining.
+				Ultimately, PoP also generates activity charts of the users to understand how much and when did they participate in the platform from it's begining.
 
 
 
