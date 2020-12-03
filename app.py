@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_misaka import Misaka
+from flaskext.markdown import Markdown
 import pandas as pd
 import json
 # Politeia Explorer and Client
@@ -9,7 +9,7 @@ comments_path = "data/comments.csv"
 
 app = Flask(__name__)
 # Markdown filter
-Misaka(app)
+Markdown(app)
 
 @app.route('/')
 def index():
