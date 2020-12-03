@@ -1,0 +1,110 @@
+# Español
+
+Motivacion
+	
+	Politeia es una de las plataformas de toma de decisiones de Decred que permite votar para financiar proyectos con fondos del Tesoro. Está orientada a ver propuestas individuales, pero cuenta con pocas herramientas para entender quienes son los usuarios, como participan y quienes verdaderamente aportan a las discusiones.
+	
+	La comunidad de Decred necesita mejores herramientas para entender lo que sucede en Politeia y tomar mejores decisiones a largo plazo, sin que estas se vean afectadas por comportamientos deshonestos como cuentas nuevas y spam.
+	
+	PoP es un primer intento para analizar lo que sucede en Politeia y a la vez darle más visibilidad e incentivar a los usuarios que más contribuyen a la toma de decisiones y el futuro de Decred.
+
+
+Recolección y análisis de datos
+
+	Politeia WWW API
+		
+		PoP usa la API de Politeia para obtener todos los comentarios de todas las propuestas de la plataforma. A partir de estos comentarios, crea también una base de usuarios y usa nuevamente la API para generar sus perfiles. De todo esto se encarga una clase llamada PoliteiaClient.
+
+	Explorador de Comentarios
+		
+		La segunda parte de PoP es un explorador de comentarios llamado CommentExplorer que analiza la colección de comentarios obtenida de la API y permite visualizarla de distintas formas:
+	
+			- Rankings
+				PoP genera ranking de usuarios, para visibilizar quienes fueron los que más contribuyeron a las discusiones.
+
+			- Temporadas
+				PoP también filtra los comentarios por fecha y permite crear rankings mensuales para incentivar más a los usuarios a participar aunque aún tengan puntajes bajos en el ranking histórico.
+
+			- Actividad
+				Por último, PoP también genera gráficos de actividad de un usuario para entender cuándo y cuánto éste participó en la plataforma desde sus inicios.
+
+
+People of Pi
+		
+		Los usuarios pueden acceder a PoP a través de una aplicación web que actualmente cuenta con 4 vistas distintas:
+			- Temporada actual
+			- Temporada pasada
+			- Ranking histórico
+			- Perfíl de usuario
+
+
+Cómo sigue?
+		
+		Esta es la primera versión, pero hay otros datos que podrían ser útiles para la comunidad de Decred y que PoP podría alojar y mostrar en el futuro:
+			
+			- Ranking por Propuesta
+				Para entender qué usuarios contribuyeron más a una discusión en particular.
+			
+			- Datos del Tesoro
+				En Politeia se decide cómo gastar los fondos del Tesoro, visualizar y entender los gastos de esté relacionado a las propuestas sería otro agregado útil.
+			
+			- Análisis de comentarios
+				Usando técnicas de análisis de texto sobre la base de comentarios, se podría entender con más detalle cómo avanzaron las discusiones, comparar la “opinión” (sentiment) de los comentarios con los resultados de las votaciones e incluso extraer información clave para proveer resúmenes de las discusiones para que los stakeholders estén lo más informados posible con el menor esfuerzo  a la hora de tomar decisiones.
+
+
+
+# English
+
+Motivation
+
+	Politeia is one of the platforms for decision making of Decred that is used to vote for financing projects using Treasury founds. It is oriented to be used for seeing individual proposals, but doesn't count with much tools to understand who are the users, how do they participate and which are the ones that really contribute to discussions.
+
+	Decred community needs better tools to understand what is happening in Politeia and make better long-term decisions without them being affected by dishonest behaviour like new accounts and spam.
+
+	PoP is a first try to analize what is happening in Politeia and at the same time give it more visibility and encourage users that contribute to decision making and Decred's future.
+
+
+
+
+Collection and analysis of data
+	
+	Politeia WWW API
+
+		PoP uses Politeia API to obtain all the proposals' comments in the platform. By using this information, it also creates a user database and generates their profiles by using the API. All this is done by a class named PoliteiaClient.
+
+	Comments Explorer
+		
+		The other part of PoP is a class named CommentExplorer that analyses the comment collection obtained from the API and enables the visualization in the following ways:
+
+	
+			- Rankings
+				PoP generates user rankings, enabling the visualization of the ones who where the most contributors to discussions.
+
+			- Seasons
+				PoP also filters comments by date and enables the creation of monthly rankings to encourage users to participate more even if they have low ranking score in the all-time ranking. 
+
+			- Activity
+				Ultimately, PoP also generates charts of the users activity to understand how much and when did they participate in the platform from it's begining.
+
+
+
+People of Pi
+		
+		Application users can access PoP through a web application that at the time contains 4 different views:
+			- Actual season
+			- Previous season
+			- Historical ranking
+			- User profile
+
+What's next?
+		
+		This is the first version, but there is more data that can be useful to Decred's community which PoP could contain and show in the future:
+
+			- Proposal inner ranking
+				To understand which users contributed more to a particular discussion.
+
+			- Treasury data
+				Politeia is used to decide how the founds of the Treasury are spent, visualizing and understanding Politeia's spending linking it with the proposals could be a useful feature to have.
+
+			- Comments analysis
+				Using text analysis techniques in the comments database, it could become more understandable how discussions progressed, enable comparing the "sentiment" of comments with vote results, and even extracting key information that could be used to make discussion summaries to bring more information to stakeholders with less effort when making desitions.
