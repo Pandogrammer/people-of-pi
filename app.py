@@ -91,6 +91,5 @@ def search():
         season_title = f"Found {len(search)} users"
         return render_template("ranking.html", ranking=search, season_title=season_title )
 
-# @app.route('/about')
-# def about():
-#     return render_template("about.html")
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
