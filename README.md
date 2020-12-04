@@ -32,3 +32,7 @@ People of Politeia is a Flask web application. In order to run your own instance
 
 To run a development instance first set up an environment variable called `FLASK_ENV` and set it to `development`.
 `export FLASK_ENV=development`
+
+## Demo
+
+Demo with preloaded data here: http://34.86.240.81:8080/
