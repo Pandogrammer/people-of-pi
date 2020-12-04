@@ -92,4 +92,4 @@ def search():
         return render_template("ranking.html", ranking=search, season_title=season_title )
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=8080)
